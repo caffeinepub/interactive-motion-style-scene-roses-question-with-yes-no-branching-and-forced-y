@@ -1,28 +1,35 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-08T12:04:38.964Z",
+  "generatedAt": "2026-02-08T12:12:12.185Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 1,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-9",
-        "summary": "Add a small playful “twist” micro-interaction to the existing roses-boring Yes/No flow on `frontend/src/pages/ValentinePage.tsx` that makes the interaction feel more fun without changing the required primary text strings or the Yes/No branching outcomes.",
+        "id": "REQ-10",
+        "summary": "Update the website/page name shown in the browser tab by changing the HTML document title in `frontend/index.html` to a clearly editable app name string.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/pages/ValentinePage.tsx",
-          "frontend/src/components/SparkleBurst.tsx",
-          "frontend/src/index.css"
+          "frontend/index.html"
         ],
         "matchedFiles": [
-          "frontend/src/pages/ValentinePage.tsx",
-          "frontend/src/components/SparkleBurst.tsx",
-          "frontend/src/index.css"
+          "frontend/index.html"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Add a short developer-facing documentation note explaining exactly where to change the website name in this codebase (including `frontend/index.html`), and if any runtime title-setting is introduced, document that location as well.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/README.md"
+        ],
+        "matchedFiles": [
+          "frontend/README.md"
         ]
       }
     ]
@@ -32,9 +39,8 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/SparkleBurst.tsx",
-    "frontend/src/index.css",
-    "frontend/src/pages/ValentinePage.tsx",
+    "frontend/README.md",
+    "frontend/index.html",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

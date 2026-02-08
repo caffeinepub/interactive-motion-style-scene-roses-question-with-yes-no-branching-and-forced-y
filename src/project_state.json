@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 9,
+  "projectStateVersion": 11,
   "summary": "Project to create an interactive motion video/animation that asks a question about roses being boring, with Yes/No branching and follow-up text/button interactions.",
   "architectural_notes": [
     "Do not include/ask the question \"Will you be my valentine?\" in the interaction flow; only use the roses-boring Yes/No branching flow."
@@ -81,6 +81,22 @@
         "REQ-9"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-website-page-name-shown-in-the-browser-tab-by-changing-the-html-document-title-in-frontend-index-html-to-a-clearly-editable-app-name-string",
+      "title": "Update the website/page name shown in the browser tab by changing the HTML document title in `frontend/index.html` to a clearly editable app name string.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-short-developer-facing-documentation-note-explaining-exactly-where-to-change-the-website-name-in-this-codebase-including-frontend-index-html-and-if-any-runtime-title-setting-is-introduced-document-that-location-as-well",
+      "title": "Add a short developer-facing documentation note explaining exactly where to change the website name in this codebase (including `frontend/index.html`), and if any runtime title-setting is introduced, document that location as well.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -93,6 +109,12 @@
     {
       "id": "AR-2",
       "summary": "Add a small twist (a tiny extra surprise/detail) to the existing roses-boring Yes/No interactive flow",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Allow changing the website/app name (e.g., page title/metadata/branding text) and document where to update it in the codebase",
       "reqIds": [],
       "status": "pending"
     }

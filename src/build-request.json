@@ -1,37 +1,51 @@
 {
   "kind": "build_request",
-  "title": "Add a small playful twist to the roses Yes/No interaction",
+  "title": "Allow changing the website name (page title) and document where to update it",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-9",
-      "text": "Add a small playful “twist” micro-interaction to the existing roses-boring Yes/No flow on `frontend/src/pages/ValentinePage.tsx` that makes the interaction feel more fun without changing the required primary text strings or the Yes/No branching outcomes.",
+      "id": "REQ-10",
+      "text": "Update the website/page name shown in the browser tab by changing the HTML document title in `frontend/index.html` to a clearly editable app name string.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-6"
         ],
         "quotes": [
-          "yeah add it"
+          "how can i change this website's name?"
         ]
       },
       "acceptanceCriteria": [
-        "The existing interaction flow remains the same: initial Yes/No choices; clicking No shows the existing No-branch message and a single Yes button; clicking Yes opens the existing success modal.",
-        "The twist is a purely visual/motion micro-interaction (e.g., a brief button dodge/wiggle/bounce, sparkle burst, or similar) that does not block the user from clicking either option (mouse and keyboard).",
-        "No new user-facing text is introduced as part of the twist (so the app continues to comply with the exact-string requirements for the three key texts).",
-        "The twist does not introduce TypeScript lint/type errors and `npm run build` succeeds."
+        "`frontend/index.html` contains the updated `<title>...</title>` value (replacing the current \"Valentine's Interactive Website\").",
+        "After rebuilding, the browser tab title shows the updated name."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Add a short developer-facing documentation note explaining exactly where to change the website name in this codebase (including `frontend/index.html`), and if any runtime title-setting is introduced, document that location as well.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "how can i change this website's name?"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new or updated documentation file in the repository clearly lists the file path(s) and the exact line/element to edit to change the website name.",
+        "Instructions are written in English and are unambiguous (a developer can follow them without guessing)."
       ]
     }
   ],
   "constraints": [
-    "Frontend files under `frontend/src/components/ui` and the paths listed in `frontend.immutablePaths` must not be edited; compose existing components instead.",
-    "Do not add new backend canisters/services; backend remains single-actor and unchanged for this twist unless strictly necessary.",
-    "Do not change the required exact user-facing strings already specified for the main question, the Yes-branch message, or the No-branch message."
+    "Do not edit files under `frontend/src/components/ui`.",
+    "Do not edit files listed as immutable: `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useInternetIdentity.tsx`, `frontend/src/hooks/useActor.ts`, `frontend/src/main.tsx`, `frontend/src/components/ui`.",
+    "Keep all user-facing text in English."
   ],
   "nonGoals": [
-    "Adding new authentication methods beyond Internet Identity.",
-    "Adding real-time features (WebSockets/chat) or external databases/services.",
-    "Changing the existing roses-boring story logic or adding new branching paths beyond the existing Yes/No flow."
+    "Adding new branding assets (logos/favicons) unless explicitly requested.",
+    "Changing the roses Yes/No interaction flow or any of its required exact strings."
   ],
   "imageRequirements": {
     "required": [],

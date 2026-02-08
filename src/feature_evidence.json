@@ -2,12 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-a-small-playful-twist-micro-interaction-to-the-existing-roses-boring-yes-no-flow-on-frontend-src-pages-valentinepage-tsx-that-makes-the-interaction-feel-more-fun-without-changing-the-required-primary-text-strings-or-the-yes-no-branching-outcomes",
-      "featureTitle": "Add a small playful “twist” micro-interaction to the existing roses-boring Yes/No flow on `frontend/src/pages/ValentinePage.tsx` that makes the interaction feel more fun without changing the required primary text strings or the Yes/No branching outcomes.",
+      "featureId": "feature-update-the-website-page-name-shown-in-the-browser-tab-by-changing-the-html-document-title-in-frontend-index-html-to-a-clearly-editable-app-name-string",
+      "featureTitle": "Update the website/page name shown in the browser tab by changing the HTML document title in `frontend/index.html` to a clearly editable app name string.",
       "files": [
-        "frontend/src/components/SparkleBurst.tsx",
-        "frontend/src/index.css",
-        "frontend/src/pages/ValentinePage.tsx"
+        "frontend/index.html"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -17,7 +15,25 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-9"
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-short-developer-facing-documentation-note-explaining-exactly-where-to-change-the-website-name-in-this-codebase-including-frontend-index-html-and-if-any-runtime-title-setting-is-introduced-document-that-location-as-well",
+      "featureTitle": "Add a short developer-facing documentation note explaining exactly where to change the website name in this codebase (including `frontend/index.html`), and if any runtime title-setting is introduced, document that location as well.",
+      "files": [
+        "frontend/README.md"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
       ],
       "confidence": "high"
     }
