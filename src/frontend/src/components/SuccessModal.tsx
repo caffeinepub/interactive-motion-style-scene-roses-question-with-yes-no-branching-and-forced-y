@@ -36,7 +36,7 @@ export default function SuccessModal({ open, onOpenChange }: SuccessModalProps) 
             🌷
           </DialogTitle>
           <DialogDescription className="text-center text-lg text-valentine-dark pt-4">
-            u are  right here's white tulips for you
+            You are right — here's tulips for you.
           </DialogDescription>
         </DialogHeader>
 

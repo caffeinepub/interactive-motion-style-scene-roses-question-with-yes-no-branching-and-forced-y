@@ -1,35 +1,24 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-08T12:12:12.185Z",
+  "generatedAt": "2026-02-08T12:20:52.402Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-10",
-        "summary": "Update the website/page name shown in the browser tab by changing the HTML document title in `frontend/index.html` to a clearly editable app name string.",
+        "id": "REQ-14",
+        "summary": "Update the Yes-branch follow-up message shown after clicking “Yes” so it does not say “here's white tulips for you” anywhere, and instead displays the exact English string: \"You are right — here's tulips for you.\" (including the em dash and trailing period).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/index.html"
+          "frontend/src/components/SuccessModal.tsx"
         ],
         "matchedFiles": [
-          "frontend/index.html"
-        ]
-      },
-      {
-        "id": "REQ-11",
-        "summary": "Add a short developer-facing documentation note explaining exactly where to change the website name in this codebase (including `frontend/index.html`), and if any runtime title-setting is introduced, document that location as well.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/README.md"
-        ],
-        "matchedFiles": [
-          "frontend/README.md"
+          "frontend/src/components/SuccessModal.tsx"
         ]
       }
     ]
@@ -39,8 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/README.md",
-    "frontend/index.html",
+    "frontend/src/components/SuccessModal.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

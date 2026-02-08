@@ -1,9 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 11,
-  "summary": "Project to create an interactive motion video/animation that asks a question about roses being boring, with Yes/No branching and follow-up text/button interactions.",
+  "projectStateVersion": 15,
+  "summary": "Project to create an interactive motion video/animation that asks a question about roses being boring, with Yes/No branching and follow-up text/button interactions (Yes-branch message updated to: \"You are right — here's tulips for you.\").",
   "architectural_notes": [
-    "Do not include/ask the question \"Will you be my valentine?\" in the interaction flow; only use the roses-boring Yes/No branching flow."
+    "Do not include/ask the question \"Will you be my valentine?\" in the interaction flow; only use the roses-boring Yes/No branching flow.",
+    "Update required exact Yes-branch message string to: \"You are right — here's tulips for you.\" (do not use \"here's white tulips for you\")."
   ],
   "known_issues": [
     "Deployment/build error encountered during deployment to the network (details not provided)."
@@ -97,6 +98,30 @@
         "REQ-11"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-change-the-website-name-shown-to-users-browser-tab-title-from-valentine-interactive-to-siddharth-by-updating-the-html-document-title-in-frontend-index-html",
+      "title": "Change the website name shown to users (browser tab title) from \"Valentine Interactive\" to \"Siddharth\" by updating the HTML document title in `frontend/index.html`.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-developer-documentation-in-frontend-readme-md-so-the-displayed-current-title-reflects-the-new-website-name-siddharth",
+      "title": "Update developer documentation in `frontend/README.md` so the displayed \"Current Title\" reflects the new website name \"Siddharth\".",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-yes-branch-follow-up-message-shown-after-clicking-yes-so-it-does-not-say-here-s-white-tulips-for-you-anywhere-and-instead-displays-the-exact-english-string-you-are-right-here-s-tulips-for-you-including-the-em-dash-and-trailing-period",
+      "title": "Update the Yes-branch follow-up message shown after clicking “Yes” so it does not say “here's white tulips for you” anywhere, and instead displays the exact English string: \"You are right — here's tulips for you.\" (including the em dash and trailing period).",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -115,6 +140,18 @@
     {
       "id": "AR-3",
       "summary": "Allow changing the website/app name (e.g., page title/metadata/branding text) and document where to update it in the codebase",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Change the displayed website/app name from “valentine interactive website” to “Siddharth” (e.g., browser tab title and any visible branding text)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Change the Yes-branch follow-up text from \"You are right — here's white tulips for you.\" to \"You are right — here's tulips for you.\" (remove the word \"white\")",
       "reqIds": [],
       "status": "pending"
     }

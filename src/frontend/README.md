@@ -1,4 +1,4 @@
-# Valentine Interactive - Developer Documentation
+# Siddharth - Developer Documentation
 
 ## Changing the Website Name (Browser Tab Title)
 
@@ -21,4 +21,4 @@ To change the website name that appears in the browser tab:
 - Keep the title concise and descriptive for the best user experience
 
 ### Current Title
-The current website name is: **Valentine Interactive**
+The current website name is: **Siddharth**

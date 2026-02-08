@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Make the website/page name (browser tab title) easy to change and document exactly where to update it.
+**Goal:** Update the Yes-branch follow-up message to remove the word “white” while keeping all existing behavior and visuals unchanged.
 
 **Planned changes:**
-- Update the `<title>...</title>` in `frontend/index.html` to a clearly editable app name string (replacing the current "Valentine's Interactive Website").
-- Add/update a short developer-facing documentation note that specifies the exact file path(s) and element/line to edit to change the website name (including `frontend/index.html`), and note any other title-setting location if applicable.
+- Change the Yes-branch follow-up text (including the forced-Yes flow) to exactly: "You are right — here's tulips for you."
+- Ensure no Yes-branch follow-up message includes the word "white" in the phrase "here's ... tulips for you".
 
-**User-visible outcome:** After rebuilding, the browser tab shows the updated website name, and developers can quickly find where to change it in the repository.
+**User-visible outcome:** After clicking “Yes” (including via the forced-Yes flow), the follow-up message reads exactly: "You are right — here's tulips for you."

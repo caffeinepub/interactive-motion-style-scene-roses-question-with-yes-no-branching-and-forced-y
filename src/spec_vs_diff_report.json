@@ -1,24 +1,29 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-08T12:12:12.182Z",
-  "summary": "REQ-10 and REQ-11 appear implemented: the HTML document title in frontend/index.html was updated, and new developer documentation (frontend/README.md) explains exactly where to change it and notes that no runtime document.title setting exists.",
+  "generatedAt": "2026-02-08T12:20:52.400Z",
+  "summary": "REQ-14’s Yes-branch follow-up message in `SuccessModal.tsx` was updated to the exact required string without the word “white”. However, the diff also includes changes to project metadata/summary files that were not requested as part of this text-only update.",
   "missing_requirements": [],
   "hallucinated_features": [
     {
-      "description": "Updated internal repository summary/metadata files not requested by the BuildRequest.",
-      "reason": "The BuildRequest only asked to change the HTML title and add developer-facing documentation about where to update it; modifying these tracking/summary files is extra scope.",
+      "description": "Updated project metadata/state summary to mention the Yes-branch message update.",
+      "reason": "The BuildRequest only asks to update the Yes-branch follow-up UI text; it does not request updating project state tracking files.",
       "evidence": [
-        "frontend-file-summaries.txt",
         "project_state.json"
+      ]
+    },
+    {
+      "description": "Updated/added detailed frontend file summaries describing UI behavior/visuals (including references to white tulips/lilies).",
+      "reason": "The BuildRequest does not ask for documentation or summary-file updates; it is a text-only UI change request.",
+      "evidence": [
+        "frontend-file-summaries.txt"
       ]
     }
   ],
-  "confidence": 0.86,
+  "confidence": 0.74,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/README.md",
-    "frontend/index.html",
+    "frontend/src/components/SuccessModal.tsx",
     "project_state.json"
   ]
 }

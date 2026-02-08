@@ -1,35 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Editable website name (document title) + documentation note",
+  "title": "Update Yes-branch follow-up copy to remove “white”",
   "requirements": [
     {
-      "id": "REQ-10",
-      "summary": "Change the browser tab/page title by updating the HTML document <title> in frontend/index.html to a clearly editable app name string.",
+      "id": "REQ-14",
+      "summary": "Change the Yes-branch success/follow-up message to the exact English string “You are right — here's tulips for you.” (no “white”), without altering any other behavior or visuals.",
       "acceptanceCriteria": [
-        "`frontend/index.html` contains the updated `<title>...</title>` value (replacing the current \"Valentine's Interactive Website\").",
-        "After rebuilding, the browser tab title shows the updated name."
+        "After the user clicks “Yes” (including after the forced-Yes flow), the visible follow-up message text is exactly: \"You are right — here's tulips for you.\"",
+        "No user-facing follow-up message in the Yes-branch contains the word \"white\" in the phrase \"here's ... tulips for you\"",
+        "All other UI behavior (Yes/No branching and existing tulip visuals/animations) remains unchanged"
       ],
       "file_operations": [
         {
-          "path": "frontend/index.html",
+          "path": "frontend/src/components/SuccessModal.tsx",
           "operation": "modify",
-          "description": "Replace the current <title>Valentine&#x27;s Interactive Website</title> with a clearly editable app name string (e.g., \"Valentine Interactive\"). Ensure the <title> remains in English and is the only change needed to affect the browser tab title on rebuild."
-        }
-      ]
-    },
-    {
-      "id": "REQ-11",
-      "summary": "Add developer-facing documentation describing exactly where to change the website name (document title) in this repo, including frontend/index.html and any runtime title-setting location if introduced later.",
-      "acceptanceCriteria": [
-        "A new or updated documentation file in the repository clearly lists the file path(s) and the exact line/element to edit to change the website name.",
-        "Instructions are written in English and are unambiguous (a developer can follow them without guessing)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/README.md",
-          "operation": "create",
-          "description": "Create a short developer note titled something like \"Changing the website name (browser tab title)\" that explicitly points to `frontend/index.html` and the `<head><title>...</title></head>` element as the place to edit. Also include a note stating that the current codebase does not set `document.title` at runtime, and if a runtime title setter is added in the future, document the exact file/location (e.g., a React effect) alongside the HTML title so developers know which source of truth to update."
+          "description": "Update the DialogDescription text shown in the Yes-branch success modal to exactly: \"You are right — here's tulips for you.\" (including the em dash and trailing period). Keep all existing tulip/lily visuals and animations unchanged. This modal uses the shadcn-ui Dialog components for the success message container; verify the component's usage instructions before implementing."
         }
       ]
     }
