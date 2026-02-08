@@ -1,2 +1,3 @@
-# interactive-motion-style-scene-roses-question-with-yes-no-branching-and-forced-y
-Exported from Caffeine project: Interactive motion-style scene: roses question with Yes/No branching and forced-Yes follow-up
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

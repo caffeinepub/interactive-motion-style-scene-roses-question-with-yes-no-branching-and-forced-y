@@ -1,0 +1,40 @@
+{
+  "kind": "build_request",
+  "title": "Add a small playful twist to the roses Yes/No interaction",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "text": "Add a small playful “twist” micro-interaction to the existing roses-boring Yes/No flow on `frontend/src/pages/ValentinePage.tsx` that makes the interaction feel more fun without changing the required primary text strings or the Yes/No branching outcomes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "yeah add it"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The existing interaction flow remains the same: initial Yes/No choices; clicking No shows the existing No-branch message and a single Yes button; clicking Yes opens the existing success modal.",
+        "The twist is a purely visual/motion micro-interaction (e.g., a brief button dodge/wiggle/bounce, sparkle burst, or similar) that does not block the user from clicking either option (mouse and keyboard).",
+        "No new user-facing text is introduced as part of the twist (so the app continues to comply with the exact-string requirements for the three key texts).",
+        "The twist does not introduce TypeScript lint/type errors and `npm run build` succeeds."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend files under `frontend/src/components/ui` and the paths listed in `frontend.immutablePaths` must not be edited; compose existing components instead.",
+    "Do not add new backend canisters/services; backend remains single-actor and unchanged for this twist unless strictly necessary.",
+    "Do not change the required exact user-facing strings already specified for the main question, the Yes-branch message, or the No-branch message."
+  ],
+  "nonGoals": [
+    "Adding new authentication methods beyond Internet Identity.",
+    "Adding real-time features (WebSockets/chat) or external databases/services.",
+    "Changing the existing roses-boring story logic or adding new branching paths beyond the existing Yes/No flow."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "frontend/src/App.tsx": "Main application component that wraps the Valentine page with ThemeProvider (removed unused useState import and Toaster component).",
+  "frontend/src/pages/ValentinePage.tsx": "Interactive page with roses question flow, showing \"do u really think roses are boring\" with Yes/No buttons (No button wiggles on hover/focus), displaying \"please click yes don't waste my labour\" message with single Yes button on No click, and triggering sparkle burst effect followed by success modal on Yes click, with floating white tulips, lilies, rose petals, sparkles, and music controls.",
+  "frontend/src/components/FloatingElement.tsx": "Reusable component that creates floating animated elements with customizable delay, duration, size, and opacity, featuring special gentle swaying and slow blossom animations for white floral elements, with error handling for failed image loads.",
+  "frontend/src/components/SuccessModal.tsx": "Modal dialog displaying \"u are  right here's white tulips for you\" message with animated confetti of white tulips and lilies falling from the top.",
+  "frontend/src/components/Footer.tsx": "Simple footer component with copyright and caffeine.ai attribution with a heart icon.",
+  "frontend/src/index.css": "Global styles with Valentine's-themed OKLCH color palette (soft pinks, reds) and custom animations including floating, swaying, gentle swaying for florals, blossom effects, pulsing, wiggle for the No button, sparkle burst for Yes button celebration, and confetti.",
+  "frontend/src/hooks/useQueries.ts": "Empty file as no backend queries are needed for this client-side only Valentine's app.",
+  "frontend/src/utils/assetDiagnostics.ts": "Runtime diagnostic helper that preflights all critical static assets and logs clear warnings for any failures during deployment validation.",
+  "frontend/src/main.tsx": "Application entry point that initializes React root and runs asset diagnostics on startup.",
+  "frontend/src/components/SparkleBurst.tsx": "Decorative component that renders a radial burst of 8 golden sparkle images that animate outward from a given x,y position with staggered timing, used as a visual flourish when the Yes button is clicked."
+}

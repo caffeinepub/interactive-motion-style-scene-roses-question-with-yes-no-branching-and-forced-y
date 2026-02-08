@@ -1,0 +1,34 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Playful micro-interaction twist for the Valentine Yes/No flow",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "summary": "Add a purely visual/motion micro-interaction to the existing Yes/No buttons on ValentinePage without changing text strings or branching outcomes, while keeping mouse + keyboard access intact.",
+      "acceptanceCriteria": [
+        "The existing interaction flow remains the same: initial Yes/No choices; clicking No shows the existing No-branch message and a single Yes button; clicking Yes opens the existing success modal.",
+        "The twist is a purely visual/motion micro-interaction (e.g., a brief button dodge/wiggle/bounce, sparkle burst, or similar) that does not block the user from clicking either option (mouse and keyboard).",
+        "No new user-facing text is introduced as part of the twist (so the app continues to comply with the exact-string requirements for the three key texts).",
+        "The twist does not introduce TypeScript lint/type errors and `npm run build` succeeds."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ValentinePage.tsx",
+          "operation": "modify",
+          "description": "Implement the playful twist on the existing Yes/No interaction: keep the same handlers and outcomes, but add a small visual/motion micro-interaction (e.g., a brief wiggle/bounce on hover/focus and a short-lived sparkle burst using /assets/generated/golden-sparkle-transparent.dim_32x32.png) that preserves clickability and keyboard activation. Continue composing the existing shadcn-ui Button component (do not edit components under frontend/src/components/ui). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/SparkleBurst.tsx",
+          "operation": "create",
+          "description": "Create a small presentational component to render a short-lived sparkle burst overlay (decorative only, pointer-events disabled) that can be triggered from ValentinePage without introducing any new user-facing text. Use the existing asset frontend/public/assets/generated/golden-sparkle-transparent.dim_32x32.png for visuals. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS keyframes/utility classes for the twist animations (e.g., one-shot wiggle/bounce for the No button and a sparkle pop/fade animation for SparkleBurst), ensuring animations are purely visual, do not permanently reposition controls, and do not interfere with focus outlines or keyboard interaction."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        
+        /* Valentine's color palette - Light mode */
+        --background: 0.98 0.02 10;
+        --foreground: 0.2 0.05 10;
+        --card: 1 0 0;
+        --card-foreground: 0.2 0.05 10;
+        --popover: 1 0 0;
+        --popover-foreground: 0.2 0.05 10;
+        --primary: 0.55 0.22 10;
+        --primary-foreground: 0.98 0 0;
+        --secondary: 0.95 0.03 10;
+        --secondary-foreground: 0.3 0.05 10;
+        --muted: 0.96 0.02 10;
+        --muted-foreground: 0.5 0.03 10;
+        --accent: 0.92 0.05 30;
+        --accent-foreground: 0.3 0.05 10;
+        --destructive: 0.55 0.25 25;
+        --destructive-foreground: 0.98 0 0;
+        --border: 0.9 0.03 10;
+        --input: 0.9 0.03 10;
+        --ring: 0.55 0.22 10;
+        
+        /* Valentine's custom colors */
+        --valentine-primary: 0.55 0.22 10;
+        --valentine-primary-dark: 0.45 0.25 10;
+        --valentine-light: 0.98 0.02 10;
+        --valentine-medium: 0.95 0.04 15;
+        --valentine-accent: 0.92 0.05 30;
+        --valentine-dark: 0.25 0.05 10;
+    }
+
+    .dark {
+        --background: 0.15 0.02 10;
+        --foreground: 0.95 0.02 10;
+        --card: 0.2 0.03 10;
+        --card-foreground: 0.95 0.02 10;
+        --popover: 0.18 0.03 10;
+        --popover-foreground: 0.95 0.02 10;
+        --primary: 0.65 0.2 10;
+        --primary-foreground: 0.15 0.02 10;
+        --secondary: 0.25 0.04 10;
+        --secondary-foreground: 0.95 0.02 10;
+        --muted: 0.25 0.03 10;
+        --muted-foreground: 0.65 0.03 10;
+        --accent: 0.35 0.05 30;
+        --accent-foreground: 0.95 0.02 10;
+        --destructive: 0.6 0.22 25;
+        --destructive-foreground: 0.95 0 0;
+        --border: 0.3 0.03 10;
+        --input: 0.3 0.03 10;
+        --ring: 0.6 0.2 10;
+        
+        /* Valentine's custom colors - Dark mode */
+        --valentine-primary: 0.65 0.2 10;
+        --valentine-primary-dark: 0.55 0.22 10;
+        --valentine-light: 0.2 0.03 10;
+        --valentine-medium: 0.25 0.04 15;
+        --valentine-accent: 0.4 0.06 30;
+        --valentine-dark: 0.9 0.02 10;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    }
+}
+
+@layer utilities {
+    /* Valentine's custom color utilities */
+    .bg-valentine-primary {
+        background-color: oklch(var(--valentine-primary));
+    }
+    
+    .bg-valentine-primary-dark {
+        background-color: oklch(var(--valentine-primary-dark));
+    }
+    
+    .bg-valentine-light {
+        background-color: oklch(var(--valentine-light));
+    }
+    
+    .bg-valentine-medium {
+        background-color: oklch(var(--valentine-medium));
+    }
+    
+    .bg-valentine-accent {
+        background-color: oklch(var(--valentine-accent));
+    }
+    
+    .text-valentine-primary {
+        color: oklch(var(--valentine-primary));
+    }
+    
+    .text-valentine-primary-dark {
+        color: oklch(var(--valentine-primary-dark));
+    }
+    
+    .text-valentine-dark {
+        color: oklch(var(--valentine-dark));
+    }
+    
+    .border-valentine-primary {
+        border-color: oklch(var(--valentine-primary));
+    }
+    
+    .fill-valentine-primary {
+        fill: oklch(var(--valentine-primary));
+    }
+    
+    .fill-valentine-accent {
+        fill: oklch(var(--valentine-accent));
+    }
+
+    /* Custom animations */
+    @keyframes float-up {
+        0% {
+            transform: translateY(0) translateX(0);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-110vh) translateX(20px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes sway {
+        0%, 100% {
+            transform: rotate(-5deg);
+        }
+        50% {
+            transform: rotate(5deg);
+        }
+    }
+
+    @keyframes sway-gentle {
+        0%, 100% {
+            transform: rotate(-3deg) scale(1);
+        }
+        50% {
+            transform: rotate(3deg) scale(1.02);
+        }
+    }
+
+    @keyframes blossom {
+        0% {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        50% {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes blossom-slow {
+        0% {
+            transform: scale(0.85);
+            opacity: 0;
+        }
+        30% {
+            opacity: 0.3;
+        }
+        60% {
+            transform: scale(1.03);
+            opacity: 0.8;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes pulse-slow {
+        0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+    }
+
+    @keyframes bounce-gentle {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes wiggle {
+        0%, 100% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(-3deg) translateX(-2px);
+        }
+        75% {
+            transform: rotate(3deg) translateX(2px);
+        }
+    }
+
+    @keyframes sparkle-burst {
+        0% {
+            transform: translate(0, 0) scale(0) rotate(0deg);
+            opacity: 1;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: translate(
+                calc(cos(var(--sparkle-angle)) * 80px),
+                calc(sin(var(--sparkle-angle)) * 80px)
+            ) scale(1.5) rotate(180deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes confetti {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(500px) rotate(720deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes spin-slow {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .animate-float-up {
+        animation: float-up linear infinite;
+    }
+
+    .animate-sway {
+        animation: sway 3s ease-in-out infinite;
+    }
+
+    .animate-sway-gentle {
+        animation: sway-gentle 5s ease-in-out infinite;
+    }
+
+    .animate-blossom {
+        animation: blossom 2s ease-out;
+    }
+
+    .animate-blossom-slow {
+        animation: blossom-slow 4s ease-out;
+    }
+
+    .animate-pulse-slow {
+        animation: pulse-slow 2s ease-in-out infinite;
+    }
+
+    .animate-bounce-gentle {
+        animation: bounce-gentle 2s ease-in-out infinite;
+    }
+
+    .animate-wiggle {
+        animation: wiggle 0.5s ease-in-out;
+    }
+
+    .animate-sparkle-burst {
+        animation: sparkle-burst 0.6s ease-out forwards;
+    }
+
+    .animate-fade-in {
+        animation: fade-in 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-delay {
+        animation: fade-in 0.8s ease-out 0.3s forwards;
+        opacity: 0;
+    }
+
+    .animate-fade-in-delay-2 {
+        animation: fade-in 0.8s ease-out 0.6s forwards;
+        opacity: 0;
+    }
+
+    .animate-fade-in-delay-3 {
+        animation: fade-in 0.8s ease-out 0.9s forwards;
+        opacity: 0;
+    }
+
+    .animate-confetti {
+        animation: confetti ease-in forwards;
+    }
+
+    .animate-spin-slow {
+        animation: spin-slow 3s linear infinite;
+    }
+
+    .drop-shadow-glow {
+        filter: drop-shadow(0 0 20px oklch(var(--valentine-primary) / 0.5));
+    }
+}

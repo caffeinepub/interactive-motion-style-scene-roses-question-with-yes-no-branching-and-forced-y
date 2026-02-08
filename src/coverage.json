@@ -1,0 +1,43 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-08T12:04:38.964Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-9",
+        "summary": "Add a small playful “twist” micro-interaction to the existing roses-boring Yes/No flow on `frontend/src/pages/ValentinePage.tsx` that makes the interaction feel more fun without changing the required primary text strings or the Yes/No branching outcomes.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/ValentinePage.tsx",
+          "frontend/src/components/SparkleBurst.tsx",
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/ValentinePage.tsx",
+          "frontend/src/components/SparkleBurst.tsx",
+          "frontend/src/index.css"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/SparkleBurst.tsx",
+    "frontend/src/index.css",
+    "frontend/src/pages/ValentinePage.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

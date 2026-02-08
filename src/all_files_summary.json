@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Minimal Motoko actor with no backend logic or persistence.",
+  "feature_evidence.json": "Metadata file describing a feature request, affected frontend files, and related components with high‑confidence evidence.",
+  "frontend-file-summaries.txt": "Text file listing short descriptions of major frontend source files for reference.",
+  "frontend/index.css": "Tailwind base theme definitions with OKLCH variables and light/dark mode color tokens.",
+  "frontend/index.html": "Basic HTML entry page mounting the React root and loading main.tsx.",
+  "frontend/src/App.tsx": "Wraps ValentinePage in a ThemeProvider with light theme enforced.",
+  "frontend/src/components/FloatingElement.tsx": "Component rendering animated floating images with sway and blossom effects, plus load‑error handling.",
+  "frontend/src/components/Footer.tsx": "Simple footer with heart icon and caffeine.ai attribution link.",
+  "frontend/src/components/SparkleBurst.tsx": "Creates an 8‑image radial sparkle animation originating from a click position.",
+  "frontend/src/components/SuccessModal.tsx": "Success dialog showing a tulip message and animated falling white‑floral confetti.",
+  "frontend/src/hooks/useActor.ts": "Hook that creates and manages a backend actor tied to Internet Identity, refetching queries on identity change.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context provider and hooks for managing Internet Identity auth state, login, logout, and stored identities.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder since no backend queries are required.",
+  "frontend/src/index.css": "Global Tailwind styles with Valentine‑themed color tokens and utility classes plus custom animations.",
+  "frontend/src/main.tsx": "React entry point initializing QueryClient and InternetIdentityProvider before rendering App.",
+  "frontend/src/pages/ValentinePage.tsx": "React page that renders a Valentine-themed interactive screen with animations, background preload, music toggle, and Yes/No button logic triggering messages and effects.",
+  "frontend/src/utils/assetDiagnostics.ts": "Utility that preloads and verifies critical image assets, logging successes and failures for deployment diagnostics.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration defining theme extensions, color tokens, animations, and plugin setup for the project.",
+  "project_state.json": "Project metadata describing requirements, features, known issues, and architectural notes for the interactive roses-boring flow."
+}
